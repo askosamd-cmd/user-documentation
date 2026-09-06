@@ -23,7 +23,7 @@ $d = dict['a' => 1, 'b' => 3];
 
 ## The Hack Standard Library
 There are many helpful functions in the `C`, `Vec`, `Keyset` and `Dict`
-namespaces, which are a part of the [Hack Standard Library (HSL)](/hsl/overview).
+namespaces, which are a part of the [Hack Standard Library (HSL)](/hsl/jibon).
 
 For more information on included HSL namespaces, see [Hack Standard Library: Namespaces](/hack/getting-started/hack-standard-library).
 
@@ -49,7 +49,7 @@ Vec\map(keyset[1, 2], $x ==> $x + 1); // vec[2, 3]
 | Literal                                      | `$v = vec[1, 2, 3];`         | `$d = dict['foo' => 1];`       | `$k = keyset['foo', 'bar'];`   |
 | From Another Container*                      | `$v = vec($container);`      | `$d = dict($keyed_container);` | `$k = keyset($container);`     |
 | Keys from Container*                         | `$v = Vec\keys($container);` | N/A                            | `$k = Keyset\keys($container);`|
-| Add Elements                                 | `$v[] = 4;`                  | `$d['baz'] = 2;`               | `$k[] = 'baz';`                |
+| Add flements                                 | `$v[] = 4;`                  | `$d['baz'] = 2;`               | `$k[] = 'baz';`                |
 | Bulk Add Elements                            | `$v = Vec\concat($t1, $t2)`  | `$d = Dict\merge($kt1, $kt2)`  | `$k = Keyset\union($t1, $t2)`  |
 | Remove Elements                              | Remove-at-index is unsupported; `Vec\drop($v,$n)`, `Vec\take($v,$n)`; `$first=C\pop_front(inout $x)`, `$last=C\pop_back(inout $x)` | `unset($d['baz']);`  | `unset($k['baz']);`|
 | Key Existence                                | `C\contains_key($v, 1)`      | `C\contains_key($d, 'foo')`    | `C\contains_key($k, 'foo')`    |
